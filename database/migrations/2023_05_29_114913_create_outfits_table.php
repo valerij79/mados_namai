@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('outfits', function (Blueprint $table) {
             $table->id();
+            $table->string('type', 50);
+            $table->string('color', 20);
+            $table->integer('size', 4);
+            $table->text();
+            $table->unsignedBigInteger('master_id');
             $table->timestamps();
         });
     }
